@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:latest
+    container_name: strapi_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: andrei_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123123
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
