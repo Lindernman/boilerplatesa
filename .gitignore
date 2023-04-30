@@ -9,4 +9,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .history
 .vscode
-/strapi_boilerplate/database/data
+/database/data
