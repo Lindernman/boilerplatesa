@@ -1,8 +1,11 @@
-export async function load({ params, fetch }) {
-	let res = await fetch('http://localhost:1337/api/tests');
-	let data = await res.json();
+import * as api from '$lib/api';
 
-	return {
-		items: { ...data }
-	};
+export async function load({ params, fetch }) {
+	try {
+		const { data } = await api.get('items');
+		console.log(data);
+		return {};
+	} catch (error) {
+		console.log(error);
+	}
 }
